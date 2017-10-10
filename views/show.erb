@@ -1,0 +1,13 @@
+<article id="showOrder">
+<p>First Name: <%= @pizza.first_name() %></p>
+<p>Last Name: <%= @pizza.last_name() %></p>
+<p>Topping: <%= @pizza.topping() %></p>
+<p>Quantity: <%= @pizza.quantity() %></p>
+<div id="orderDiv">
+<button class="editButton"><a id="editButtonLink" href="/pizzas/<%= @pizza.id %>/edit">Edit Order</a></button>
+
+<form action="/pizzas/<%= @pizza.id %>/delete" method="POST">
+  <button class="editButton" type="submit">Delete Order</button>
+</form>
+</div>
+</article>
